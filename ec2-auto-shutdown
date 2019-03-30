@@ -28,7 +28,7 @@ do
   since_last_activity=`expr $now - $last_activity`
   if [ "$since_last_activity" -gt "$shutdown_after" ]; then
     if [ "$idle" ]; then
-      /usr/sbin/shutdown now Shutdown initiated by ec2-auto-shutdown.
+      /sbin/shutdown now Shutdown initiated by ec2-auto-shutdown.
       sleep 60
     fi
   fi
